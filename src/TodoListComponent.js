@@ -46,18 +46,28 @@ class TodoListComponent extends React.Component{
 	}
 }
 
+//As lambda function
+const TodoList = (props) => 
+	(
+		<ul>
+			{props.items.map(item => (
+				<li key={item.id}>{item.text}</li>
+			))}
+		</ul>
+	);
+
 /**
  * @class: TodoList
  * @classdesc: represents the current list
  */
-class TodoList extends React.Component{
-	render(){
-		return (
-			<ul>
-				{this.props.items.map(item => (
-					<li key={item.id}>{item.text}</li>
-				))}
-			</ul>
-		);
-	}
-}
+// class TodoList extends React.Component{
+// 	render(){
+// 		return (
+// 			<ul>
+// 				{this.props.items.map(item => (
+// 					<li key={item.id}>{item.text}</li>
+// 				))}
+// 			</ul>
+// 		);
+// 	}
+// }
